@@ -1,0 +1,183 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+body {
+  font-family: "lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(35deg, #84fab0, #8fd3f4);
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+h4 {
+  text-align: justify !important;
+  font-size: 1.1rem;
+}
+.wrapper-card {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 98%;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-bottom: 200px;
+  margin-left: auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  flex: 1;
+  margin: 8px;
+  padding: 30px;
+  position: relative;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+.card-action {
+  margin-bottom: 10px;
+}
+.card.popular {
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+.card.popular .card-title h3 {
+  color: #3498db;
+  font-size: 22px;
+}
+.card.popular .card-price {
+  margin: 10px;
+}
+.card.popular .card-price h1 {
+  color: #3498db;
+  font-size: 60px;
+}
+.card.popular .card-action button {
+  background-color: #3498db;
+  border-radius: 0px;
+  color: #fff;
+  font-size: 17px;
+  margin-top: -15px;
+  padding: 15px;
+  height: 80px;
+}
+.card.popular .card-action button:hover {
+  background-color: #2386c8;
+}
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-ribbon {
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+  left: -10px;
+  width: 114px;
+  height: 112px;
+}
+.card-ribbon span {
+  position: absolute;
+  display: block;
+  width: 160px;
+  padding: 10px 0;
+  background-color: #3498db;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  left: -35px;
+  top: 25px;
+  transform: rotate(-45deg);
+}
+.card-ribbon::before,
+.card-ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+  border: 5px solid #2980b9;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.card-ribbon::before {
+  top: 0;
+  right: 0;
+}
+.card-ribbon::after {
+  bottom: 0;
+  left: 0;
+}
+
+.card-title h3 {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.card-title h4 {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.card-price {
+  margin: 10px 0;
+}
+.card-price h1 {
+  font-size: 46px;
+}
+.card-price h1 sup {
+  font-size: 15px;
+  display: inline-block;
+  margin-left: -20px;
+  width: 10px;
+}
+.card-price h1 small {
+  color: rgba(0, 0, 0, 0.3);
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.card-description ul {
+  display: block;
+  list-style: none;
+  margin: 60px 0;
+  padding: 0;
+}
+.card-description li {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+  margin: 0 0 15px;
+  text-align: left;
+}
+.card-description li::before {
+  content: "✅";
+  padding: 0 5px 0 0;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.card-action button {
+  background: transparent;
+  border: 2px solid #3498db;
+  border-radius: 0px;
+  color: #3498db;
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 20px;
+  width: 100%;
+  height: 60px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+.card-action button:hover {
+  background-color: #3498db;
+  box-shadow: 0 2px 4px #196090;
+  color: #fff;
+}
+
+@media only screen and (max-width: 1100px) {
+  .wrapper-card {
+    flex-direction: column;
+  }
+}
